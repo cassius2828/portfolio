@@ -9,21 +9,22 @@
 const navMenu = document.querySelector(".navMenu");
 const navItem = document.querySelectorAll(".navItem");
 const hamburger = document.querySelector(".hamburger");
-const closeIcon = document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
-const navBar = document.querySelector("#navBar");
-const dropdown = document.querySelectorAll('.dropdown');
+const bars = document.querySelectorAll('.bar');
+// const closeIcon = document.querySelector(".closeIcon");
+// const menuIcon = document.querySelector(".menuIcon");
+// const navBar = document.querySelector("#navBar");
+// const dropdown = document.querySelectorAll('.dropdown');
 
 
 hamburger.addEventListener('click', () => {
-    dropdown.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    // navMenu.classList.toggle('active');
 })
 
 document.querySelectorAll('.navItem').forEach(item => {
     addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove("active");
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle("active");
     })
 })
 
