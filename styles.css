@@ -128,9 +128,16 @@ a {
   color: pink;
 }
 
+.bar {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  margin-top: 0.3rem;
+}
 
 @media (max-width: 768px) {
-  .dropdown {
+  .hamburger {
     display: block;
     position: fixed;
     z-index: 999;
@@ -138,14 +145,9 @@ a {
     right: 1rem;
   }
 
-  .dropdown.active {
-    /* color: lime; */
-    display: hidden;
-  }
-
-  .menuIcon {
-    display: block;
-    position: absolute;
+  .menuIcon.active {
+    display: none;
+    cursor: pointer;
   }
 
   .closeIcon {
@@ -159,7 +161,7 @@ a {
     display: none;
   } */
 
-  /* .hamburger.active .bar:nth-child(2) {
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 
@@ -169,29 +171,24 @@ a {
 
   .hamburger.active .bar:nth-child(3) {
     transform: rotate(-45deg);
-  } */
+  }
 
   .navItem {
     /* position: fixed; */
-    border: solid 3px lime;
-    display: block;
-    position: fixed;
-    color: pink;
-    transform: translateY(-150%);
-    /* put translateY(0) on active ^ */
-    top: 0;
-    left:0;
-    margin: 1rem auto;
+    font-size: 1.5rem;
+    /* left: -100%; */
+    top: 6rem;
+    gap: 0;
     flex-direction: column;
+    /* background-color: rgb(164, 207, 193); */
     width: 100%;
-    justify-content: center;
     text-align: center;
     transition: 0.3s;
-    font-size: 2rem;
   }
 
-  .showNavItem {
-    transform: translateY(0);
+  .navItem.active {
+    /* transform: translateY(0%); */
+    left: 0;
   }
 
   .navMenu {
@@ -215,7 +212,6 @@ a {
     position: fixed;
     /* top: 4rem; */
     /* put 4rem on active ^ */
-
   }
 
   /* #navBar.active {

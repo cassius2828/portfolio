@@ -1,0 +1,175 @@
+:root {
+    box-sizing: border-box;
+    overflow: hidden;
+    --line-color: rgba(181, 234, 240, 0.164);
+    --bg-color: rgb(21, 21, 21);
+    font-family: 'Tilt Neon', cursive;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+@keyframes fadeInTop {
+    from {
+  transform: translatey(-50%);
+  opacity: 0;
+    }
+    to {
+  transform: translatey(0);
+  opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInTopMore {
+    from {
+  transform: translatey(-800%);
+  opacity: 0;
+    }
+    to {
+  transform: translatey(0);
+  opacity: 1;
+    }
+  }
+
+
+h1, li, h3, p, a {
+    
+    color: var(--line-color);
+    text-decoration: none;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-bottom: solid 3px var(--line-color);
+  animation: fadeInTop 2s ease;
+    
+}
+
+nav a:hover {
+    color: aqua;
+    text-shadow: 0 0 7px,
+    0 0 14px,
+    0 0 21px;
+
+}
+
+
+/* main */
+
+h3 {
+    font-size: 1.7rem;
+    margin: 1rem;
+    color: var(--line-color);
+
+
+}
+
+/* main */
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+h1 {
+    font-size: 4rem;
+  animation: fadeInTop 2s ease;
+
+}
+
+li, p {
+    font-size: 1.5rem;
+    list-style: none;
+    text-align: center;
+  animation: fadeInTop 2s ease;
+
+    
+}
+
+li:hover, p:hover, h1:hover, .icons:hover {
+    color: aqua;
+    text-shadow: 0 0 7px,
+    0 0 14px,
+    0 0 21px;
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  align-items: center;
+}
+
+.icons {
+    /* margin: auto 2rem; */
+    position: relative;
+    color: var(--line-color)
+}
+
+.phone {
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.email {
+    top: 1.85rem;
+    left: -1.35rem;
+}
+
+
+
+/*  extra space to fix wave */
+
+.extra-space {
+    height: 60vw;
+    /* background-color: var(--line-color); */
+    background-color: #313839;
+    opacity: 1;
+    position: relative;
+    top: 15rem;
+}
+
+.wave {
+    animation: wave 10s linear infinite;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100vw;
+    top: -9rem;
+    left: 0rem;
+    /* transform: scale(3); */
+}
+
+
+@keyframes wave {
+    0% {
+transform: translateX(-50rem);
+transform: scale(1);
+    }
+50% {
+    transform: translateX(0);
+transform: scale(1.5);
+}
+
+    100% {
+        transform: translateX(-50rem);
+        transform: scale(1);
+    }
+}
+
+
+
